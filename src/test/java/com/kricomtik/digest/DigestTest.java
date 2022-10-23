@@ -21,6 +21,7 @@ public class DigestTest {
         InputStream byteArrayInputStream = new ByteArrayInputStream(text.getBytes(StandardCharsets.UTF_8));
         InputStream inputStream = new DigestInputStream(byteArrayInputStream, digest);
 
+        //Using digest with DigestInputStream
         digest.withAlgorithm(Algorithm.SHA1)
                 .withInputStream(inputStream)
                 .initialize();
